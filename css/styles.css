@@ -1,0 +1,263 @@
+:root {
+  /* PRIMARY COLOR */
+  --primary-color: #339ecc;
+
+  /* LIGHT MODE */
+  --header-background: hsl(215, 55%, 96%);
+  --background-color: hsl(0, 0%, 100%);
+  --card-background: hsl(220, 21%, 60%);
+  /* TEXT-LIGHT */
+  --text-color: hsl(0, 0%, 20%);
+}
+
+* {
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 500ms;
+}
+
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  font-family: 'Open sans', sans-serif;
+  margin: 0 auto;
+  max-width: 1440px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  /* DARK MODE */
+  --header-background: hsl(217, 28%, 15%);
+  --background-color: hsl(218, 28%, 13%);
+  --card-background: hsl(219, 30%, 18%);
+  /* TEXT-DARK */
+  --text-color: hsl(0, 0%, 100%);
+}
+
+.header {
+  padding: 0 2rem 1rem;
+  background-color: var(--header-background);
+  text-align: center;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.switch-theme {
+  display: flex;
+}
+
+.switch-theme__icon {
+  width: 20px;
+}
+
+.header__image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  width: 200px;
+  display: inline-block;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.article__item {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.article__item-title {
+  position: relative;
+}
+
+.article__item-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: -5%;
+  width: 110%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+.article-with-image {
+  position: relative;
+  padding: 4rem 2rem;
+}
+
+@media screen and (min-width:768px) {
+  .article-with-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+
+  }
+}
+
+.article-with-image::before,
+.article-with-image::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.article-with-image::before {
+  top: 0;
+}
+
+.article-with-image::after {
+  bottom: 0;
+}
+
+.article-with-image__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.article-with-image__text {
+  line-height: 1.5;
+}
+
+.article-with-image__link {
+  color: var(--primary-color);
+}
+
+.testimonials {
+  padding: 4rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.testimonial {
+  margin-bottom: 2rem;
+}
+
+.testimonial {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border-radius: 1rem;
+  box-shadow: 8px 8px 8px var(--primary-color);
+  padding: 2rem 2rem;
+}
+
+.testimonial__text {
+  margin-top: 0;
+}
+
+.testimonial__image {
+  width: 48px;
+  border-radius: 50%;
+}
+
+.testimonial__author {
+  margin: 0;
+  display: flex;
+}
+
+.testimonial__author-text {
+  margin-left: 1rem;
+}
+
+.testimonial__name {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.testimonial__job {
+  margin: 0;
+}
+
+.change-color {
+  background-color: #d3d3d3;
+  border-radius: 8px;
+  position: fixed;
+  top: 25vh;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  z-index: 1;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.color {
+  width: 25px;
+  height: 25px;
+}
+
+.color--blue {
+  background-color: #339ecc;
+}
+
+.color--pink {
+  background-color: #f30fa7;
+}
+
+.color--green {
+  background-color: #33cc47;
+}
+
+.color--red {
+  background-color: #cc3354;
+}
